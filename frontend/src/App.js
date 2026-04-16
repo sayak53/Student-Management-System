@@ -15,7 +15,7 @@ function App() {
 
   // 🔹 Fetch students
   const fetchStudents = async () => {
-    const res = await fetch("http://localhost:5000/api/students");
+    const res = await fetch("https://student-backend-7d1b.onrender.com/api/students");
     const data = await res.json();
     setStudents(data);
   };
@@ -32,14 +32,14 @@ function App() {
   // 🔹 Add / Update
   const saveStudent = async () => {
     if (editingId) {
-      await fetch(`http://localhost:5000/api/students/${editingId}`, {
+      await fetch(`https://student-backend-7d1b.onrender.com/api/students/${editingId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form)
       });
       setEditingId(null);
     } else {
-      await fetch("http://localhost:5000/api/students", {
+      await fetch("https://student-backend-7d1b.onrender.com/api/students", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form)
@@ -52,7 +52,7 @@ function App() {
 
   // 🔹 Delete
   const deleteStudent = async (id) => {
-    await fetch(`http://localhost:5000/api/students/${id}`, {
+    await fetch(`https://student-backend-7d1b.onrender.com/api/students/${id}`, {
       method: "DELETE"
     });
     fetchStudents();
