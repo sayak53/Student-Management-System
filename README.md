@@ -21,5 +21,3 @@ A full-stack web application to manage student records with features like adding
 - 📊 Sort by age
 - 🎯 Filter by course
 - 🌐 Fully deployed (frontend + backend)
-
-## 📁 Project Structure
